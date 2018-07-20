@@ -42,6 +42,10 @@ Set-Location $scriptDir
 $startingDir = [System.Environment]::CurrentDirectory
 [System.Environment]::CurrentDirectory = $scriptDir
 
+#Log File Info.  Set the following for example:
+#$sLogPath = "C:\Windows\Temp"
+#$sLogName = "<script_name>.log"
+#$sLogFile = Join-Path -Path $sLogPath -ChildPath $sLogName
 
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
 
@@ -74,6 +78,8 @@ Function <FunctionName>{
 #>
 
 #-----------------------------------------------------------[Execution]------------------------------------------------------------
+
+#Log-Start -LogPath $sLogPath -LogName $sLogName -ScriptVersion $sScriptVersion
 try
 {
     # TODO: Insert script here.
@@ -82,5 +88,6 @@ finally
 {
     Set-Location $startingLoc
     [System.Environment]::CurrentDirectory = $startingDir
+    #Log-Finish -LogPath $sLogFile
     Write-Output "Done. Elapsed time: $($stopwatch.Elapsed)"
 }
