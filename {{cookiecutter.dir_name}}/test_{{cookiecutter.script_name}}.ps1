@@ -1,0 +1,1 @@
+pwsh ./{{cookiecutter.script_name}}.ps1
