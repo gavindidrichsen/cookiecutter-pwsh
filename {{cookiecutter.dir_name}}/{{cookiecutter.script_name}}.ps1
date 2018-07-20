@@ -1,5 +1,3 @@
-# See http://joshua.poehls.me/powershell-script-boilerplate/
-# See http://9to5it.com/powershell-script-template/
 <#
 .SYNOPSIS
   <Overview of script>
@@ -16,7 +14,10 @@
   Author:         <Name>
   Creation Date:  <Date>
   Purpose/Change: Initial script development
-  
+.LINK
+  See the following links which inspired this boilerplate:
+  http://joshua.poehls.me/powershell-script-boilerplate/
+  http://9to5it.com/powershell-script-template/
 .EXAMPLE
   <Example goes here. Repeat this attribute for more than one example>
 #>
